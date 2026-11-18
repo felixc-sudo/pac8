@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CARBONCUT | Responsive Carbon Tracking & Media Query Breakpoints</title>
+  <link rel="stylesheet" href="carboncut_viewport_queries.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="cc-nav-shell">
+    <div class="cc-container cc-nav-inner">
+      <a href="#hero-stage" class="cc-brand">
+        <span class="cc-pulse"></span> CARBONCUT
+      </a>
+      <nav class="cc-menu" aria-label="Main Menu">
+        <a href="#breakpoint-simulator">Breakpoint Gallery</a>
+        <a href="#carbon-calc">Footprint Calculator</a>
+        <a href="#crud-tracker">Reduction Checklist</a>
+        <a href="#mq-theory">Media Query Theory</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero-stage" class="cc-hero">
+    <div class="cc-container cc-hero-flex">
+      <div class="cc-hero-copy">
+        <span class="cc-kicker">Carbon Footprint Tracking &amp; Reduction Services</span>
+        <h1>Adaptive Emissions Intelligence Across Desktop, Tablet &amp; Mobile</h1>
+        <p>
+          CARBONCUT delivers real-time carbon tracking and verified reduction services powered by
+          <strong>CSS Media Queries Breakpoints</strong> (<code>@media only screen and (max-width: ...)</code>),
+          reorganizing dashboards seamlessly from widescreen command centers to field tablets and mobile phones.
+        </p>
+        <div class="cc-hero-btns">
+          <a href="#breakpoint-simulator" class="cc-btn cc-btn-primary">Test Viewport Breakpoints</a>
+          <a href="#crud-tracker" class="cc-btn cc-btn-outline">Manage Reduction Tasks</a>
+        </div>
+      </div>
+
+      <!-- Live Viewport Breakpoint Indicator Card -->
+      <div class="cc-viewport-card" aria-live="polite">
+        <span class="cc-vp-label">ACTIVE DEVICE VIEWPORT</span>
+        <h2 id="activeDeviceName">Desktop (&gt; 1024px)</h2>
+        <p id="activeRuleCode">@media only screen and (min-width: 1025px)</p>
+        <div class="cc-vp-meter">
+          <span>Width: <strong id="liveWidthPx">1280</strong>px</span>
+          <span>Layout: <strong id="liveGridCols">3-Column Wide</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practicum Core: CSS Media Queries Breakpoint Simulator & Adaptive Carbon Gallery -->
+  <section id="breakpoint-simulator" class="cc-section">
+    <div class="cc-container">
+      <div class="cc-sec-header">
+        <div>
+          <h2>CSS Media Queries Breakpoint &mdash; Adaptive Carbon Services</h2>
+          <p>Resize your browser or switch device frames below to preview Desktop, Tablet (<code>max-width: 1024px</code>), and Mobile (<code>max-width: 640px</code>) layouts.</p>
+        </div>
+
+        <div class="cc-device-tabs" role="group" aria-label="Device Breakpoint Switcher">
+          <button type="button" class="cc-tab active" onclick="applyViewportPreview('auto', this)">Auto Screen</button>
+          <button type="button" class="cc-tab" onclick="applyViewportPreview('desktop', this)">Desktop</button>
+          <button type="button" class="cc-tab" onclick="applyViewportPreview('tablet', this)">Tablet (1024px)</button>
+          <button type="button" class="cc-tab" onclick="applyViewportPreview('mobile', this)">Mobile (640px)</button>
+        </div>
+      </div>
+
+      <!-- Adaptive Wireframe + Live Carbon Service Cards -->
+      <div id="adaptiveFrame" class="cc-device-frame">
+        <!-- Top Full-Width Hero Telemetry Banner -->
+        <div class="cc-banner-card">
+          <div>
+            <span class="cc-badge">SCOPE 1 &ndash; 3 REAL-TIME TELEMETRY</span>
+            <h3>Global Enterprise Net-Zero Command</h3>
+            <p>48,920 tonnes CO₂e verified reductions tracked across 310 partner facilities.</p>
+          </div>
+          <div class="cc-banner-stat">
+            <strong>-36.4%</strong>
+            <span>Annual Intensity Drop</span>
+          </div>
+        </div>
+
+        <!-- Middle Multi-Column Reduction Services (3 cols Desktop -> 4-tile grid Tablet -> 3-tile compact Mobile) -->
+        <div class="cc-services-matrix">
+          <article class="cc-srv-card">
+            <img
+              src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80"
+              alt="Solar Grid Transition"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22220%22><rect width=%22400%22 height=%22220%22 fill=%22%23312e81%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23c7d2fe%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Solar Grid Transition</text></svg>'"
+            />
+            <div class="cc-srv-body">
+              <h4>Solar Grid Transition</h4>
+              <p>Cut Scope 2 electricity emissions up to 68% with rooftop &amp; PPA clean power.</p>
+            </div>
+          </article>
+
+          <article class="cc-srv-card">
+            <img
+              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80"
+              alt="Reforestation Offsets"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22220%22><rect width=%22400%22 height=%22220%22 fill=%22%2314532d%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23bbf7d0%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Reforestation Offsets</text></svg>'"
+            />
+            <div class="cc-srv-body">
+              <h4>Reforestation Offsets</h4>
+              <p>Satellite-verified native forest restoration with serialized retirement certificates.</p>
+            </div>
+          </article>
+
+          <article class="cc-srv-card">
+            <img
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=80"
+              alt="EV Logistics Routing"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22220%22><rect width=%22400%22 height=%22220%22 fill=%22%231e3a8a%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23dbeafe%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>EV Logistics Routing</text></svg>'"
+            />
+            <div class="cc-srv-body">
+              <h4>EV Logistics Routing</h4>
+              <p>Low-carbon fleet electrification and Scope 3 supply-chain route optimization.</p>
+            </div>
+          </article>
+
+          <article class="cc-srv-card">
+            <img
+              src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=700&q=80"
+              alt="Circular Zero-Waste"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22220%22><rect width=%22400%22 height=%22220%22 fill=%22%230f766e%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23ccfbf1%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Circular Zero-Waste</text></svg>'"
+            />
+            <div class="cc-srv-body">
+              <h4>Circular Zero-Waste</h4>
+              <p>Closed-loop material audits eliminating landfill methane emissions.</p>
+            </div>
+          </article>
+
+          <article class="cc-srv-card">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80"
+              alt="Blue Carbon Mangroves"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22220%22><rect width=%22400%22 height=%22220%22 fill=%22%230369a1%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23e0f2fe%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Blue Carbon Mangroves</text></svg>'"
+            />
+            <div class="cc-srv-body">
+              <h4>Blue Carbon Mangroves</h4>
+              <p>Coastal seagrass and mangrove conservation sequestering carbon 4x faster.</p>
+            </div>
+          </article>
+
+          <article class="cc-srv-card">
+            <img
+              src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=700&q=80"
+              alt="Smart Meter Analytics"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22220%22><rect width=%22400%22 height=%22220%22 fill=%22%23334155%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23f1f5f9%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Smart Meter Analytics</text></svg>'"
+            />
+            <div class="cc-srv-body">
+              <h4>Smart Meter Analytics</h4>
+              <p>Automated IoT sub-metering and live ESG compliance reporting.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Bottom Full-Width Action Bar -->
+        <div class="cc-bottom-bar">
+          <span>Verified ISO-14064 &amp; GHG Protocol Compliant Carbon Ledger</span>
+          <a href="#carbon-calc" class="cc-btn cc-btn-primary">Estimate Your Emissions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carbon Footprint Calculator -->
+  <section id="carbon-calc" class="cc-section cc-tinted">
+    <div class="cc-container">
+      <div class="cc-sec-header">
+        <div>
+          <h2>Carbon Footprint Calculator</h2>
+          <p>Adjust monthly power, travel, and operations inputs to compute your carbon footprint.</p>
+        </div>
+      </div>
+
+      <div class="cc-calc-grid">
+        <div class="cc-calc-inputs">
+          <div class="cc-field">
+            <label for="kwhInput">Monthly Electricity Usage: <strong id="kwhVal">290</strong> kWh</label>
+            <input type="range" id="kwhInput" min="50" max="1500" value="290" oninput="computeCarbon()" />
+          </div>
+          <div class="cc-field">
+            <label for="kmInput">Weekly Commute / Fleet Travel: <strong id="kmVal">125</strong> km</label>
+            <input type="range" id="kmInput" min="0" max="1000" value="125" oninput="computeCarbon()" />
+          </div>
+          <div class="cc-field">
+            <label for="dietInput">Diet &amp; Operations Profile</label>
+            <select id="dietInput" onchange="computeCarbon()">
+              <option value="115">Plant-Based / Low-Carbon (115 kg CO₂e/mo)</option>
+              <option value="170" selected>Vegetarian Balanced (170 kg CO₂e/mo)</option>
+              <option value="250">Standard Mixed (250 kg CO₂e/mo)</option>
+              <option value="340">High-Intensity Cold Chain (340 kg CO₂e/mo)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cc-calc-output">
+          <span class="cc-out-tag">ESTIMATED MONTHLY EMISSIONS</span>
+          <div class="cc-out-num"><span id="monthCo2">492</span> <small>kg CO₂e</small></div>
+          <p>Annual Projection: <strong id="yearCo2">5.90</strong> tonnes CO₂e / year</p>
+          <div id="statusNote" class="cc-status-note">Moderate — 20% reduction achievable via Solar Grid Transition</div>
+          <button type="button" class="cc-btn cc-btn-primary cc-block-btn" onclick="addCalcMilestone()">
+            + Add Offset Milestone to Checklist
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRUD Action Checklist (Input box, Add button onclick, CRUD array of tasks) -->
+  <section id="crud-tracker" class="cc-section">
+    <div class="cc-container">
+      <div class="cc-sec-header">
+        <div>
+          <h2>Carbon Reduction CRUD Action Checklist</h2>
+          <p>Create, read, update, and delete sustainability actions stored in a live JavaScript task array.</p>
+        </div>
+      </div>
+
+      <div class="cc-crud-card">
+        <div class="cc-input-row">
+          <input
+            type="text"
+            id="crudTaskInput"
+            placeholder="Enter a carbon reduction milestone (e.g., Switch warehouse to solar PPA)..."
+            aria-label="New carbon reduction task"
+          />
+          <button type="button" class="cc-btn cc-btn-primary" onclick="addTask()">Add Task</button>
+        </div>
+
+        <div class="cc-crud-meta">
+          <span id="crudCount">0 milestones tracked</span>
+          <button type="button" class="cc-link-btn" onclick="restoreSamples()">Reset Sample Milestones</button>
+        </div>
+
+        <ul id="crudTaskList" class="cc-task-ul"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimum Underpinning Theory -->
+  <section id="mq-theory" class="cc-section cc-tinted">
+    <div class="cc-container">
+      <div class="cc-sec-header">
+        <div>
+          <h2>Minimum Underpinning Theory: CSS Media Queries</h2>
+          <p>Adapting web layouts dynamically across screen widths, orientations, and device resolutions.</p>
+        </div>
+      </div>
+
+      <div class="cc-theory-box">
+        <p>
+          The minimum underpinning theory for using <strong>CSS media queries</strong> involves adapting web design
+          based on device characteristics such as screen width, height, orientation, and resolution. Using
+          <code>@media only screen and (max-width: 1024px)</code> for tablets and
+          <code>@media only screen and (max-width: 640px)</code> for mobile phones, CARBONCUT dynamically transitions
+          its multi-column service grid from a wide 3-column desktop matrix to a balanced 2-column tablet layout and a
+          compact mobile stack while keeping typography and interactive controls accessible on every viewport.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="cc-footer">
+    <div class="cc-container cc-footer-flex">
+      <span><strong>CARBONCUT</strong> &mdash; Carbon Footprint Tracking &amp; Reduction Services</span>
+      <span>&copy; 2026 CARBONCUT &bull; Ready for GitHub &amp; Vercel</span>
+    </div>
+  </footer>
+
+  <script src="carboncut_breakpoint_crud.js"></script>
+</body>
+</html>
